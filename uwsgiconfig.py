@@ -5,6 +5,7 @@ uwsgi_version = '2.1-dev'
 import os
 import re
 import time
+import platform
 uwsgi_os = os.environ.get('UWSGI_FORCE_OS', platform.uname()[0])
 uwsgi_os_k = re.split('[-+_]', platform.uname()[2])[0]
 uwsgi_os_v = platform.uname()[3]
